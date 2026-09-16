@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="tg" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ҶДММ "Баҳори Пурфайз" | Моҳипарварӣ ва Маҳсулоти Табиӣ</title>
+  <meta name="description"
+    content="ҶДММ Баҳори Пурфайз – Парвариш ва фурӯши моҳии зинда, молёк ва маҳсулоти нимтайёри табиӣ: Котлет, Шашлик, Нарезной, Филе, Духовка ва Замороженный." />
+
+  <!-- Favicon using real company logo -->
+  <link rel="icon" type="image/png" href="logo.png" />
+
+  <!-- Google Fonts: Montserrat ONLY -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600;1,700&display=swap"
+    rel="stylesheet" />
+
+  <!-- FontAwesome Icons 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ══════════════════════════════════════════════════════════
+       1. INTERACTIVE WATER & DIVERSE SWIMMING FISH CANVAS
+       ══════════════════════════════════════════════════════════ -->
+  <canvas id="waterCanvas"></canvas>
+  <div class="water-noise-overlay"></div>
+
+  <!-- ══════════════════════════════════════════════════════════
+       2. STICKY HEADER WITH 3 LANGUAGES, THEME TOGGLE & REAL LOGO
+       ══════════════════════════════════════════════════ -->
+  <header class="site-header" id="mainHeader">
+    <div class="header-container">
+      <a href="#hero" class="logo-wrapper">
+        <div class="logo-img-wrapper">
+          <img src="logo.png" alt="Баҳори Пурфайз" />
+        </div>
+        <div class="logo-text">
+          <span class="logo-title" data-i18n="logo_title">БАҲОРИ ПУРФАЙЗ</span>
+          <span class="logo-subtitle" data-i18n="logo_subtitle">ҶДММ • МОҲИПАРВАРӢ ВА КОРКАРД</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu" id="navMenu">
+        <ul class="nav-links">
+          <li><a href="#hero" class="nav-link active"><i class="fa-solid fa-house"></i> <span
+                data-i18n="nav_home">Асосӣ</span></a></li>
+          <li><a href="#catalog" class="nav-link"><i class="fa-solid fa-boxes-stacked"></i> <span
+                data-i18n="nav_catalog">Маҳсулотҳо</span></a></li>
+          <li><a href="#process" class="nav-link"><i class="fa-solid fa-water"></i> <span data-i18n="nav_process">Аз
+                Ҳавз то Дастархон</span></a></li>
+          <li><a href="#calculator" class="nav-link"><i class="fa-solid fa-calculator"></i> <span
+                data-i18n="nav_calc">Ҳисобкунак</span></a></li>
+          <li><a href="#gallery" class="nav-link"><i class="fa-solid fa-images"></i> <span
+                data-i18n="nav_gallery">Галерея</span></a></li>
+          <li><a href="#about" class="nav-link"><i class="fa-solid fa-award"></i> <span data-i18n="nav_about">Дар бораи
+                мо</span></a></li>
+          <li><a href="#contacts" class="nav-link"><i class="fa-solid fa-phone"></i> <span
+                data-i18n="nav_contact">Тамос</span></a></li>
+        </ul>
+      </nav>
+
+      <!-- Language & Theme Switcher & WhatsApp CTA -->
+      <div class="header-actions">
+        <!-- 3-Language Selector -->
+        <div class="lang-switch-box">
+          <button class="lang-btn active" data-lang="tg">TJ</button>
+          <button class="lang-btn" data-lang="ru">RU</button>
+          <button class="lang-btn" data-lang="uz">UZ</button>
+        </div>
+
+        <!-- Light / Dark Theme Toggle -->
+        <button class="theme-toggle-btn" id="themeToggle" aria-label="Табдили реҷаи рӯшноӣ"
+          title="Реҷаи равшан / торик">
+          <i class="fa-solid fa-sun icon-sun"></i>
+          <i class="fa-solid fa-moon icon-moon"></i>
+        </button>
+
+        <!-- Direct WhatsApp button with real number -->
+        <a href="https://wa.me/992556575353" target="_blank" class="btn-glow-order">
+          <i class="fa-brands fa-whatsapp"></i>
+          <span data-i18n="header_order_btn">Фармоиш: +992 556 57 53 53</span>
+        </a>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="menu-toggle-btn" id="menuToggle" aria-label="Меню">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ══════════════════════════════════════════════════════════
+       3. HERO SECTION WITH OFFICIAL LOGO & 3D VIBE
+       ══════════════════════════════════════════════════ -->
+  <section class="hero-section" id="hero">
+    <div class="hero-content container">
+
+      <!-- Center Official Logo Showcase Badge -->
+      <div class="hero-logo-showcase">
+        <div class="hero-logo-badge">
+          <img src="logo.png" alt="ҶДММ Баҳори Пурфайз" class="hero-logo-img" />
+          <div class="logo-glow-ring"></div>
+        </div>
+      </div>
+
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        <span data-i18n="hero_badge">100% МОҲИИ ЗИНДАИ ТАБИӢ ВА МАҲСУЛОТИ ОЛӢ</span>
+      </div>
+
+      <h1 class="hero-title">
+        <span data-i18n="hero_title_1">Моҳипарварии Муосир,</span> <br />
+        <span class="gradient-text" data-i18n="hero_title_2">Лаззати Беназири Табиӣ</span>
+      </h1>
+
+      <p class="hero-description" data-i18n="hero_desc">
+        Парвариш аз 0 дар оби тозаи чашмаҳои кӯҳӣ: аз молёк ва моҳии зиндаи калон то маҳсулоти болаззати тайёр ва
+        нимтайёр (Котлет, Шашлик, Нарезной, Филе, Духовка ва Заморозка) барои оила ва зиёфатҳои шумо.
+      </p>
+
+      <div class="hero-cta-group">
+        <a href="#catalog" class="btn-primary-3d">
+          <i class="fa-solid fa-boxes-stacked"></i>
+          <span data-i18n="hero_btn_catalog">Дидани Маҳсулотҳо</span>
+          <i class="fa-solid fa-arrow-right-long"></i>
+        </a>
+        <a href="#process" class="btn-glass-secondary">
+          <i class="fa-solid fa-circle-play"></i>
+          <span data-i18n="hero_btn_process">Раванди Парвариш</span>
+        </a>
+      </div>
+
+      <!-- Quick Stats -->
+      <div class="hero-stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fa-solid fa-seedling"></i></div>
+          <div class="stat-info">
+            <span class="stat-number" data-i18n="stat_1_val">Аз 0</span>
+            <span class="stat-label" data-i18n="stat_1_lbl">Парвариши пурраи молёк</span>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fa-solid fa-shield-halved"></i></div>
+          <div class="stat-info">
+            <span class="stat-number">100%</span>
+            <span class="stat-label" data-i18n="stat_2_lbl">Экологӣ ва бе кимиёвӣ</span>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fa-solid fa-utensils"></i></div>
+          <div class="stat-info">
+            <span class="stat-number">8+</span>
+            <span class="stat-label" data-i18n="stat_3_lbl">Намуди маҳсулоти тайёр</span>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fa-solid fa-truck-fast"></i></div>
+          <div class="stat-info">
+            <span class="stat-number">24/7</span>
+            <span class="stat-label" data-i18n="stat_4_lbl">Интиқоли тозаву сард</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <a href="#catalog" class="hero-scroll-indicator">
+      <span data-i18n="scroll_down">Ба поён гузаред</span>
+      <div class="mouse-wheel-icon">
+        <div class="wheel-dot"></div>
+      </div>
+    </a>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════
+       4. INTERACTIVE PRODUCT CATALOG (GROUPED PHOTOS)
+       ══════════════════════════════════════════════════ -->
+  <section class="catalog-section" id="catalog">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="section-subtitle-tag">
+          <i class="fa-solid fa-fish"></i> <span data-i18n="cat_tag">МАҲСУЛОТИ БОСИФАТ ВА ТАБИӢ</span>
+        </div>
+        <h2 class="section-main-title">
+          <span data-i18n="cat_title_1">Каталоги Маҳсулоти</span> <span class="gradient-text"
+            data-i18n="cat_title_2">"Баҳори Пурфайз"</span>
+        </h2>
+        <p class="section-desc" data-i18n="cat_desc">
+          Ҳамаи маҳсулотҳо бо аксҳои воқеӣ, таркиб ва тарзи пухтан. Барои дидани ҳамаи аксҳои гурӯҳ ва маълумоти
+          муфассал рӯи маҳсулот клик намоед.
+        </p>
+      </div>
+
+      <!-- Filter Controls & Search -->
+      <div class="catalog-filter-bar">
+        <div class="filter-tabs" id="filterTabs">
+          <button class="filter-btn active" data-filter="all">
+            <i class="fa-solid fa-border-all"></i> <span data-i18n="filter_all">Ҳамаи Маҳсулотҳо</span>
+          </button>
+          <button class="filter-btn" data-filter="semi">
+            <i class="fa-solid fa-fire-burner"></i> <span data-i18n="filter_semi">Нимтайёр (Котлет, Шашлик,
+              Духовка)</span>
+          </button>
+          <button class="filter-btn" data-filter="fresh">
+            <i class="fa-solid fa-utensils"></i> <span data-i18n="filter_fresh">Тару тоза (Филе, Нарезной)</span>
+          </button>
+          <button class="filter-btn" data-filter="frozen">
+            <i class="fa-solid fa-snowflake"></i> <span data-i18n="filter_frozen">Яхкардашуда (Заморозка)</span>
+          </button>
+          <button class="filter-btn" data-filter="live">
+            <i class="fa-solid fa-water"></i> <span data-i18n="filter_live">Моҳии Зинда ва Молёк</span>
+          </button>
+        </div>
+
+        <div class="search-sort-box">
+          <div class="search-input-wrapper">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="productSearch" placeholder="Ҷустуҷӯи маҳсулот..."
+              data-i18n-placeholder="search_placeholder" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Dynamic Product Cards Grid -->
+      <div class="products-grid" id="productsContainer">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════
+       5. PRODUCT DETAIL & RECIPE MODAL (CAROUSEL & SPECS)
+       ══════════════════════════════════════════════════ -->
+  <div class="product-modal-overlay" id="productModal" role="dialog" aria-hidden="true">
+    <div class="product-modal-card">
+      <button class="modal-close-btn" id="closeModalBtn" aria-label="Пӯшидан">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="modal-grid-layout">
+        <!-- Left: Image Carousel & Thumbnails Strip -->
+        <div class="modal-gallery-side">
+          <div class="main-image-display">
+            <img id="modalMainImg" src="" alt="Маҳсулот" />
+            <div class="image-badge" id="modalBadge">Маҳсулоти Табиӣ</div>
+            <div class="image-counter-pill">
+              <span id="currentImgIndex">1</span> / <span id="totalImgCount">1</span>
+            </div>
+            <button class="gallery-nav-btn prev-btn" id="prevImgBtn"><i class="fa-solid fa-chevron-left"></i></button>
+            <button class="gallery-nav-btn next-btn" id="nextImgBtn"><i class="fa-solid fa-chevron-right"></i></button>
+          </div>
+
+          <!-- Thumbnails Strip -->
+          <div class="thumbnails-strip" id="modalThumbnails">
+            <!-- Dynamically generated -->
+          </div>
+        </div>
+
+        <!-- Right: Information, Cooking Instructions & Order -->
+        <div class="modal-info-side">
+          <div class="modal-header-meta">
+            <span class="category-tag" id="modalCategory">Нимтайёр</span>
+            <h3 class="modal-product-title" id="modalTitle">Котлетҳои моҳӣ</h3>
+            <div class="modal-rating-row">
+              <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <span class="review-count" data-i18n="modal_quality_guarantee">(100% Сифати кафолатнок ва гигиена)</span>
+            </div>
+          </div>
+
+          <p class="modal-description" id="modalDescription"></p>
+
+          <!-- Tabbed detail sections: Cooking Guide vs Nutrition vs Packaging -->
+          <div class="modal-detail-tabs">
+            <div class="detail-tab-buttons">
+              <button class="tab-pill active" data-tab="cooking">
+                <i class="fa-solid fa-kitchen-set"></i> <span data-i18n="tab_cooking">Тарзи пухтан</span>
+              </button>
+              <button class="tab-pill" data-tab="benefits">
+                <i class="fa-solid fa-heart-pulse"></i> <span data-i18n="tab_benefits">Фоида ва Таркиб</span>
+              </button>
+              <button class="tab-pill" data-tab="packaging">
+                <i class="fa-solid fa-box"></i> <span data-i18n="tab_packaging">Бастабандӣ</span>
+              </button>
+            </div>
+
+            <div class="tab-content active" id="tab-cooking">
+              <div class="cooking-steps-list" id="modalCookingSteps"></div>
+            </div>
+
+            <div class="tab-content" id="tab-benefits">
+              <div class="benefits-grid" id="modalBenefits"></div>
+            </div>
+
+            <div class="tab-content" id="tab-packaging">
+              <div class="packaging-info-box" id="modalPackaging"></div>
+            </div>
+          </div>
+
+          <!-- Price & Quantity Order Bar -->
+          <div class="modal-order-footer">
+            <div class="order-price-box">
+              <span class="price-label" data-i18n="price_approx">Нархи тахминӣ:</span>
+              <span class="price-val" id="modalPrice">Мувофиқ</span>
+            </div>
+
+            <div class="modal-cta-buttons">
+              <button class="btn-whatsapp-order" id="modalWhatsAppBtn">
+                <i class="fa-brands fa-whatsapp"></i>
+                <span data-i18n="order_whatsapp_btn">Фармоиш бо WhatsApp</span>
+              </button>
+              <a href="tel:+992556575353" class="btn-call-direct" id="modalCallBtn">
+                <i class="fa-solid fa-phone"></i>
+                <span data-i18n="call_btn">Занг задан</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════
+       6. PROCESS PIPELINE: "АЗ ҲАВЗ ТО ДАСТАРХОН"
+       ══════════════════════════════════════════════════ -->
+  <section class="process-section" id="process">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="section-subtitle-tag">
+          <i class="fa-solid fa-dna"></i> <span data-i18n="proc_tag">ТЕХНОЛОГИЯИ ТОЗА ВА АЗ 0</span>
+        </div>
+        <h2 class="section-main-title">
+          <span data-i18n="proc_title_1">Аз Ҳавзи Тозаи Кӯҳӣ то</span> <span class="gradient-text"
+            data-i18n="proc_title_2">Дастархони Шумо</span>
+        </h2>
+        <p class="section-desc" data-i18n="proc_desc">
+          Моҳии мо дар обҳои равони мусаффо ва ҳавои тоза парвариш ёфта, бо риояи тамоми қоидаҳои санитарӣ ба маҳсулоти
+          болаззат табдил дода мешавад.
+        </p>
+      </div>
+
+      <div class="process-timeline">
+        <div class="process-step-card">
+          <div class="step-glow-circle">
+            <i class="fa-solid fa-egg"></i>
+          </div>
+          <h4 class="step-title" data-i18n="pstep1_title">1. Парвариш аз 0</h4>
+          <p class="step-desc" data-i18n="pstep1_desc">
+            Интихоби насли тоза ва парвариши молёкҳо дар ҳавзҳои махсуси инкубатсионӣ бо оби ҳамеша гардишкунанда.
+          </p>
+        </div>
+
+        <div class="process-step-card">
+          <div class="step-glow-circle">
+            <i class="fa-solid fa-wheat-awn"></i>
+          </div>
+          <h4 class="step-title" data-i18n="pstep2_title">2. Ғизои 100% Табиӣ</h4>
+          <p class="step-desc" data-i18n="pstep2_desc">
+            Истифодаи танҳо хӯрокҳои табиии дорои витаминҳо ва минералҳо, бе иловаҳои кимиёвӣ ва антибиотикҳо.
+          </p>
+        </div>
+
+        <div class="process-step-card">
+          <div class="step-glow-circle">
+            <i class="fa-solid fa-water-ladder"></i>
+          </div>
+          <h4 class="step-title" data-i18n="pstep3_title">3. Сайди Моҳии Зинда</h4>
+          <p class="step-desc" data-i18n="pstep3_desc">
+            Сайди фаврии моҳии калон ва солим аз ҳавзҳо бевосита пеш аз коркард ва бастабандӣ.
+          </p>
+        </div>
+
+        <div class="process-step-card">
+          <div class="step-glow-circle">
+            <i class="fa-solid fa-utensils"></i>
+          </div>
+          <h4 class="step-title" data-i18n="pstep4_title">4. Коркарди Махсус</h4>
+          <p class="step-desc" data-i18n="pstep4_desc">
+            Тозакунии касбӣ, филе кардан, маринад кардани шашлик ва тайёр намудани котлетҳои хушбӯй.
+          </p>
+        </div>
+
+        <div class="process-step-card">
+          <div class="step-glow-circle">
+            <i class="fa-solid fa-truck-ramp-box"></i>
+          </div>
+          <h4 class="step-title" data-i18n="pstep5_title">5. Интиқоли Сард</h4>
+          <p class="step-desc" data-i18n="pstep5_desc">
+            Бастабандии бехатар дар қуттиҳои сард (термобокс) ва расонидани зуд ба дастархони шумо.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════
+       7. INTERACTIVE ORDER & PRICE CALCULATOR
+       ══════════════════════════════════════════════════ -->
+  <section class="calculator-section" id="calculator">
+    <div class="container">
+      <div class="calculator-wrapper">
+        <div class="calc-header-text">
+          <span class="calc-badge"><i class="fa-solid fa-calculator"></i> <span data-i18n="calc_badge">ҲИСОБКУНАКИ
+              ОСОН</span></span>
+          <h3 class="calc-title" data-i18n="calc_title">Фармоиши худро дар 1 дақиқа ҳисоб кунед</h3>
+          <p class="calc-desc" data-i18n="calc_desc">
+            Маҳсулоти дилхоҳ ва миқдори лозимаро интихоб намоед. Система паёми омодашударо барои WhatsApp тартиб
+            медиҳад!
+          </p>
+        </div>
+
+        <div class="calc-interactive-card">
+          <div class="calc-step-row">
+            <label class="calc-label"><i class="fa-solid fa-fish"></i> <span data-i18n="calc_step1">1. Маҳсулотро
+                интихоб кунед:</span></label>
+            <div class="calc-product-select-grid" id="calcProductSelector">
+              <!-- Dynamically rendered -->
+            </div>
+          </div>
+
+          <div class="calc-step-row">
+            <label class="calc-label"><i class="fa-solid fa-scale-balanced"></i> <span data-i18n="calc_step2">2. Миқдор
+                (Кг / Порсия):</span></label>
+            <div class="quantity-picker">
+              <button class="qty-btn" id="qtyMinus"><i class="fa-solid fa-minus"></i></button>
+              <input type="number" id="calcQuantity" value="2" min="1" max="100" />
+              <button class="qty-btn" id="qtyPlus"><i class="fa-solid fa-plus"></i></button>
+              <span class="qty-unit" id="calcUnit" data-i18n="calc_unit_kg">Кг</span>
+            </div>
+          </div>
+
+          <div class="calc-step-row">
+            <label class="calc-label"><i class="fa-solid fa-truck"></i> <span data-i18n="calc_step3">3. Тарзи
+                қабул:</span></label>
+            <div class="delivery-type-options">
+              <label class="delivery-radio-card active">
+                <input type="radio" name="deliveryType" value="delivery" checked />
+                <i class="fa-solid fa-truck-fast"></i>
+                <div class="radio-info">
+                  <strong data-i18n="deliv_address">Интиқол ба суроға</strong>
+                  <small data-i18n="deliv_box">Дар термобокси сард</small>
+                </div>
+              </label>
+
+              <label class="delivery-radio-card">
+                <input type="radio" name="deliveryType" value="pickup" />
+                <i class="fa-solid fa-store"></i>
+                <div class="radio-info">
+                  <strong data-i18n="deliv_pickup">Худам мегирам (Самовывоз)</strong>
+                  <small data-i18n="deliv_pond">Аз ҳавз ё нуқтаи фурӯш</small>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <div class="calc-summary-panel">
+            <div class="calc-summary-details">
+              <div class="summary-line">
+                <span data-i18n="summary_choice">Интихоб:</span>
+                <strong id="summaryProductName">Котлетҳои моҳӣ</strong>
+              </div>
+              <div class="summary-line">
+                <span data-i18n="summary_volume">Ҳаҷм:</span>
+                <strong id="summaryQuantity">2 Кг</strong>
+              </div>
+              <div class="summary-line">
+                <span data-i18n="summary_status">Ҳолат:</span>
+                <strong class="highlight-green" data-i18n="summary_fresh_live">Тару тоза аз моҳии зинда</strong>
+              </div>
+              <div class="summary-line">
+                <span data-i18n="summary_payment">Пардохт:</span>
+                <strong style="color: #0284c7;"><i class="fa-solid fa-credit-card"></i> Алиф / Душанбе Сити</strong>
+              </div>
+            </div>
+
+            <div class="calc-action-buttons">
+              <button class="btn-whatsapp-calc" id="sendWhatsAppOrder">
+                <i class="fa-brands fa-whatsapp"></i>
+                <span data-i18n="send_whatsapp_btn">Фармоиш ба WhatsApp (+992 556 57 53 53)</span>
+              </button>
+              <button class="btn-telegram-calc" id="sendTelegramOrder">
+                <i class="fa-brands fa-telegram"></i>
+                <span data-i18n="send_telegram_btn">Фармоиш ба Telegram</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════
+       8. REAL PHOTO GALLERY & LIGHTBOX
+       ══════════════════════════════════════════════════ -->
+  <section class="gallery-section" id="gallery">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="section-subtitle-tag">
+          <i class="fa-solid fa-camera"></i> <span data-i18n="gallery_tag">АКСҲОИ ВОҚЕӢ</span>
+        </div>
+        <h2 class="section-main-title">
+          <span data-i18n="gallery_title_1">Галереяи Аксҳои</span> <span class="gradient-text"
+            data-i18n="gallery_title_2">Маҳсулот ва Ҳавзҳо</span>
+        </h2>
+        <p class="section-desc" data-i18n="gallery_desc">
+          Ҳамаи суратҳо бе филтр ва мустақиман аз маҳсулоти тайёркардаи худамон мебошанд. Барои калон дидан клик кунед.
+        </p>
+      </div>
+
+      <div class="gallery-masonry-grid" id="galleryGrid">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX MODAL -->
+  <div class="lightbox-overlay" id="lightboxModal" aria-hidden="true">
+    <button class="lightbox-close-btn" id="closeLightboxBtn"><i class="fa-solid fa-xmark"></i></button>
+    <div class="lightbox-content">
+      <img id="lightboxImg" src="" alt="Калон дидани акс" />
+      <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════
+       9. ABOUT US & ADVANTAGES
+       ══════════════════════════════════════════════════ -->
+  <section class="about-section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text-column">
+          <div class="section-subtitle-tag">
+            <i class="fa-solid fa-medal"></i> <span data-i18n="about_tag">СИФАТИ КАФОЛАТНОК</span>
+          </div>
+          <h2 class="section-main-title">
+            <span data-i18n="about_title_1">Чаро ҶДММ</span> <span class="gradient-text"
+              data-i18n="about_title_2">"Баҳори Пурфайз"</span><span data-i18n="about_title_3">-ро интихоб
+              мекунанд?</span>
+          </h2>
+          <p class="about-paragraph" data-i18n="about_desc">
+            Мо на танҳо фурӯшанда, балки <strong>истеҳсолкунандаи воқеӣ</strong> ҳастем. Ҳамаи марҳилаҳо — аз наслгирӣ
+            ва парвариши молёк то сайди моҳии калони зинда ва тайёр намудани маҳсулоти нимтайёр дар зери назорати қатъии
+            мутахассисони мо қарор дорад.
+          </p>
+
+          <div class="advantages-list">
+            <div class="adv-item">
+              <div class="adv-icon"><i class="fa-solid fa-droplet"></i></div>
+              <div class="adv-text">
+                <h4 data-i18n="adv1_title">Оби Тозаи Чашмаҳо</h4>
+                <p data-i18n="adv1_desc">Ҳавзҳои мо бо оби равони кӯҳӣ таъмин буда, гӯшти моҳиро ниҳоят болаззат ва бе
+                  бӯи лой мегардонад.</p>
+              </div>
+            </div>
+
+            <div class="adv-item">
+              <div class="adv-icon"><i class="fa-solid fa-fish"></i></div>
+              <div class="adv-text">
+                <h4 data-i18n="adv2_title">Моҳии Ҳамеша Зинда</h4>
+                <p data-i18n="adv2_desc">Маҳсулот танҳо аз моҳии зинда омода шуда, тозагӣ ва табииии он 100% кафолат
+                  дода мешавад.</p>
+              </div>
+            </div>
+
+            <div class="adv-item">
+              <div class="adv-icon"><i class="fa-solid fa-hand-holding-dollar"></i></div>
+              <div class="adv-text">
+                <h4 data-i18n="adv3_title">Нархи Истеҳсолкунанда</h4>
+                <p data-i18n="adv3_desc">Шумо маҳсулотро бе миёнаравҳо, бо нархи дастраси яклухт ва чакана харидорӣ
+                  мекунед.</p>
+              </div>
+            </div>
+
+            <div class="adv-item">
+              <div class="adv-icon"><i class="fa-solid fa-users-gear"></i></div>
+              <div class="adv-text">
+                <h4 data-i18n="adv4_title">Ҳамкорӣ бо Хоҷагиҳо</h4>
+                <p data-i18n="adv4_desc">Таъмини доимии молёк ва моҳии вазнин барои дигар ҳавзҳо, ошхонаҳо ва
+                  ресторанҳо.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-visual-column">
+          <div class="scenic-card-3d">
+            <img src="farm-scenic.jpg" alt="Ҳавзҳои Баҳори Пурфайз" class="scenic-img" />
+            <div class="scenic-floating-badge">
+              <div class="logo-img-wrapper" style="width: 44px; height: 44px;">
+                <img src="logo.png" alt="Баҳори Пурфайз" />
+              </div>
+              <div>
+                <strong data-i18n="eco_badge_title">Сатҳи Олии Экологӣ</strong>
+                <span data-i18n="eco_badge_sub">Парвариши тоза аз 0</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════
+       10. FAQ ACCORDION
+       ══════════════════════════════════════════════════ -->
+  <section class="faq-section" id="faq">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="section-subtitle-tag">
+          <i class="fa-solid fa-circle-question"></i> <span data-i18n="faq_tag">САВОЛҲОИ МУҲИМ</span>
+        </div>
+        <h2 class="section-main-title">
+          <span data-i18n="faq_title_1">Саволу Ҷавобҳои</span> <span class="gradient-text"
+            data-i18n="faq_title_2">Зуд-зуд пурсидашаванда</span>
+        </h2>
+      </div>
+
+      <div class="faq-accordion-list">
+        <div class="faq-item active">
+          <button class="faq-question">
+            <span data-i18n="faq_q1">Оё моҳӣ ва маҳсулоти шумо 100% ҳалол ва табиӣ аст?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p data-i18n="faq_a1">Бале! Ҳамаи маҳсулоти мо танҳо аз моҳии зинда бо ғизои табиӣ парвариш ёфта, бо риояи
+              тамоми талаботҳои шариат ва гигиена коркард мешаванд. Ягон намуди маводи кимиёвӣ истифода намешавад.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span data-i18n="faq_q2">Интиқол чӣ тавр сурат мегирад?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p data-i18n="faq_a2">Мо маҳсулотро дар қуттиҳои термобокси махсуси хунуккунанда интиқол медиҳем, то ки тару
+              тоза ва яхбастагии маҳсулот то расидан ба дасти шумо пурра ҳифз шавад.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span data-i18n="faq_q3">Оё молёкро барои ҳавзҳои шахсӣ ё хоҷагиҳо харидан мумкин аст?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p data-i18n="faq_a3">Бале, мо молёки зотӣ ва солимро бо нархи яклухт пешниҳод менамоем. Инчунин барои
+              дуруст парвариш кардан ва ғизодиҳӣ машварати касбии ройгон медиҳем.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span data-i18n="faq_q4">Чӣ тавр метавонам маҳсулотро фармоиш диҳам?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p data-i18n="faq_a4">Шумо метавонед тавассути сомона тугмаи WhatsApp-ро пахш намуда (+992 556 57 53 53)
+              мустақиман фармоиш диҳед ё ба рақамҳои мо занг занед.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════
+       11. CONTACTS & DIRECT ORDER
+       ══════════════════════════════════════════════════ -->
+  <section class="contacts-section" id="contacts">
+    <div class="container">
+      <div class="contacts-card-wrapper">
+        <div class="contacts-info-side">
+          <div class="section-subtitle-tag">
+            <i class="fa-solid fa-headset"></i> <span data-i18n="contacts_tag">АЛОҚА ВА СУРОҒА</span>
+          </div>
+          <h3 class="contacts-title" data-i18n="contacts_title">Бо Мо Дар Тамос Бошед</h3>
+          <p class="contacts-desc" data-i18n="contacts_desc">
+            Барои фармоиши яклухт ва чакана, харидани молёк ё ҳамкории доимӣ бо мо тамос гиред:
+          </p>
+
+          <div class="contact-methods">
+            <a href="https://wa.me/992556575353" target="_blank" class="contact-box-link whatsapp-link">
+              <div class="c-icon"><i class="fa-brands fa-whatsapp"></i></div>
+              <div class="c-text">
+                <span class="c-label" data-i18n="c_wa_label">Фармоиш дар WhatsApp</span>
+                <span class="c-val">+992 556 57 53 53</span>
+              </div>
+            </a>
+
+            <a href="tel:+992556575353" class="contact-box-link phone-link">
+              <div class="c-icon"><i class="fa-solid fa-phone-volume"></i></div>
+              <div class="c-text">
+                <span class="c-label" data-i18n="c_phone_label">Занги телефонӣ</span>
+                <span class="c-val">+992 556 57 53 53</span>
+              </div>
+            </a>
+
+            <div class="contact-box-link loc-link">
+              <div class="c-icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div class="c-text">
+                <span class="c-label" data-i18n="c_loc_label">Ҷойгиршавӣ</span>
+                <span class="c-val" data-i18n="c_loc_val">Ҷумҳурии Тоҷикистон, Хоҷагии Моҳипарварӣ</span>
+              </div>
+            </div>
+
+            <div class="contact-box-link time-link">
+              <div class="c-icon"><i class="fa-solid fa-clock"></i></div>
+              <div class="c-text">
+                <span class="c-label" data-i18n="c_time_label">Реҷаи корӣ</span>
+                <span class="c-val" data-i18n="c_time_val">Ҳамарӯза аз соати 08:00 то 20:00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contacts-form-side">
+          <h4 class="form-title"><i class="fa-solid fa-envelope-open-text"></i> <span data-i18n="form_title">Паёми худро
+              фиристед</span></h4>
+          <form id="contactForm" class="direct-contact-form">
+            <div class="form-group">
+              <label for="userName" data-i18n="form_name_lbl">Номи Шумо:</label>
+              <input type="text" id="userName" placeholder="Номатонро нависед..." data-i18n-placeholder="form_name_ph"
+                required />
+            </div>
+
+            <div class="form-group">
+              <label for="userPhone" data-i18n="form_phone_lbl">Рақами телефон:</label>
+              <input type="tel" id="userPhone" placeholder="+992 556 57 53 53" required />
+            </div>
+
+            <div class="form-group">
+              <label for="userProduct" data-i18n="form_prod_lbl">Маҳсулоти дилхоҳ:</label>
+              <select id="userProduct">
+                <option value="Котлетҳои моҳӣ">Котлетҳои моҳӣ</option>
+                <option value="Шашлики моҳӣ (Сихдор ва маринад)">Шашлики моҳӣ (Сихдор ва маринад)</option>
+                <option value="Нарезной / Стейк">Нарезной / Стейк</option>
+                <option value="Филеи тоза">Филеи тоза</option>
+                <option value="Моҳӣ барои Духовка">Моҳӣ барои Духовка</option>
+                <option value="Замороженный">Замороженный</option>
+                <option value="Моҳии Зинда">Моҳии Зинда</option>
+                <option value="Молёк барои парвариш">Молёк барои парвариш</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="userMsg" data-i18n="form_msg_lbl">Шарҳ ё савол:</label>
+              <textarea id="userMsg" rows="3" placeholder="Миқдор, суроға ё шарҳи иловагӣ..."
+                data-i18n-placeholder="form_msg_ph"></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit-order">
+              <i class="fa-brands fa-whatsapp"></i>
+              <span data-i18n="form_submit_btn">Фиристодани паём ба WhatsApp</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════
+       12. FOOTER
+       ══════════════════════════════════════════════════ -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <div class="logo-wrapper">
+          <div class="logo-img-wrapper">
+            <img src="logo.png" alt="Баҳори Пурфайз" />
+          </div>
+          <div class="logo-text">
+            <span class="logo-title" data-i18n="logo_title">БАҲОРИ ПУРФАЙЗ</span>
+            <span class="logo-subtitle" data-i18n="logo_subtitle">ҶДММ • МОҲИПАРВАРӢ ВА КОРКАРД</span>
+          </div>
+        </div>
+        <p class="footer-bio" data-i18n="footer_bio">
+          Истеҳсолкунандаи боэътимоди моҳии зинда, молёк ва маҳсулоти болаззати нимтайёри табиӣ дар Тоҷикистон.
+        </p>
+      </div>
+
+      <div class="footer-nav-col">
+        <h4 data-i18n="footer_prods_title">Маҳсулотҳо</h4>
+        <ul>
+          <li><a href="#catalog">Котлетҳои моҳӣ</a></li>
+          <li><a href="#catalog">Шашлики моҳӣ</a></li>
+          <li><a href="#catalog">Нарезной / Стейк</a></li>
+          <li><a href="#catalog">Филеи тоза</a></li>
+          <li><a href="#catalog">Моҳии Зинда ва Молёк</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-nav-col">
+        <h4 data-i18n="footer_pages_title">Саҳифаҳо</h4>
+        <ul>
+          <li><a href="#hero" data-i18n="nav_home">Асосӣ</a></li>
+          <li><a href="#process" data-i18n="nav_process">Аз Ҳавз то Дастархон</a></li>
+          <li><a href="#gallery" data-i18n="nav_gallery">Галерея</a></li>
+          <li><a href="#calculator" data-i18n="nav_calc">Ҳисобкунак</a></li>
+          <li><a href="#contacts" data-i18n="nav_contact">Тамос</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-social-col">
+        <h4 data-i18n="footer_contacts_title">Тамос ва Шабакаҳо</h4>
+        <div class="footer-phone-direct">
+          <i class="fa-solid fa-phone"></i>
+          <a href="tel:+992556575353">+992 556 57 53 53</a>
+        </div>
+        <div class="social-pills">
+          <a href="https://wa.me/992556575353" target="_blank" class="soc-pill" aria-label="WhatsApp"><i
+              class="fa-brands fa-whatsapp"></i></a>
+          <a href="https://t.me/share/url?url=https://wa.me/992556575353" target="_blank" class="soc-pill"
+            aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+          <a href="#" class="soc-pill" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="soc-pill" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container bottom-row">
+        <p>© 2026 ҶДММ "Баҳори Пурфайз". <span data-i18n="all_rights">Ҳамаи ҳуқуқҳо маҳфузанд.</span></p>
+        <p class="credit" data-i18n="footer_credit">Муосиртарин сайти 3D моҳипарварӣ бо сифати олӣ</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ══════════════════════════════════════════════════════════
+       13. FLOATING QUICK CONTACT BAR
+       ══════════════════════════════════════════════════ -->
+  <div class="floating-contact-bar">
+    <a href="https://wa.me/992556575353" target="_blank" class="float-btn float-whatsapp"
+      title="WhatsApp (+992 556 57 53 53)">
+      <i class="fa-brands fa-whatsapp"></i>
+      <span class="float-tooltip">WhatsApp: +992 556 57 53 53</span>
+    </a>
+    <a href="tel:+992556575353" class="float-btn float-call" title="Занг задан">
+      <i class="fa-solid fa-phone"></i>
+      <span class="float-tooltip">Занг: +992 556 57 53 53</span>
+    </a>
+  </div>
+
+  <!-- Main JavaScript File -->
+  <script src="script.js"></script>
+</body>
+
+</html>
